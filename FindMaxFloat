@@ -1,0 +1,29 @@
+package com.Generics;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class FindMaxFloat {
+
+	public static void main(String[] args) {
+		
+		List<Float> list = new ArrayList<Float>();    
+		list.add(30.1f);  
+		list.add(20.1f);
+		list.add(10.1f);			
+		
+		List<Float> maxNo = new ArrayList<Float>();  
+		maxNo.add(list.get(0));
+		
+		for(int i=1; i<list.size(); i++)
+		{	
+			if(maxNo.get(0).compareTo(list.get(i))<0)
+			{
+				maxNo.set(0,list.get(i));
+			}
+		}
+		System.out.println("Max Float Number " + maxNo.get(0));
+
+	}
+
+}
