@@ -1,0 +1,29 @@
+package com.Generics;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class FindMaxString {
+
+	public static void main(String[] args) {
+		
+		List<String> list = new ArrayList<String>();    
+		list.add("I");  
+		list.add("AM");
+		list.add("INDIAN");		
+		
+		List<String> maxString = new ArrayList<String>();
+		maxString.add(list.get(0));
+		
+		for(int i=1; i<list.size(); i++)
+		{	
+			if(maxString.get(0).compareTo(list.get(i) )<0)
+			{
+				maxString.set(0,list.get(i));
+			}
+		}
+		System.out.println("Max String " + maxString.get(0));
+
+	}
+
+}
